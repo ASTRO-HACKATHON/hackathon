@@ -47,3 +47,18 @@ script: phpunit --configuration phpunit_$DB.xml --coverage-text
 # configure notifications (email, IRC, campfire etc)
 notifications:
   irc: "irc.freenode.org#yourfavouriteroomfortravis"
+  
+  
+  deploy:
+  edge: true
+  sudo: false
+  provider: cloudfoundary
+  username: sarathysrm@gmail.com
+  password: Candyshop5*
+  api: https://api.run.pivotal.io
+  organization: sarathysrt_org
+  space: development
+  app: hackathon
+  repo: ASTRO-HACKATHON/hackathon
+  skip_cleanup: true
+
